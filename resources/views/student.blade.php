@@ -7,12 +7,12 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <title>Student Management System</title>
   </head>
   <body>
     @include('navbar')
-    <div class="row  justify-content-center">
+    <div class="row header-container justify-content-center">
         <div class="header">
             <h1>Student Management System</h1>
         </div>
@@ -36,7 +36,7 @@
                 </section>
                 <section class="col-md-5">
                     <div class="card mb-3">
-                        <img src="https://www.intel.com/content/dam/www/central-libraries/us/en/images/adobestock-370985958.jpeg.rendition.intel.web.576.324.jpg" class="card-img-top" alt="...">
+                        <img src="http://austinchildrensacademy.org/wp-content/uploads/2014/12/elementary-school-girl.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Enter the new informations of the new student</h5>
                             <form action="{{ url('/store') }}" method="post">
@@ -62,7 +62,6 @@
                                     <input type="text" class="form-control" id="speciality" name="speciality" placeholder="Enter the speciality">
                                 </div>
                                 <input type="submit" class="btn btn-info" value="Save">
-                                <input type="submit" class="btn btn-warning" value="Reset">
                             </form>
                         </div>
                     </div>
@@ -91,7 +90,7 @@
             <section class="col-md-5">
 
                 <div class="card mb-3">
-                    <img src="https://www.freestudy.com/wp-content/uploads/2019/11/Education.jpg" class="card-img-top" alt="...">
+                    <img src="http://austinchildrensacademy.org/wp-content/uploads/2014/12/elementary-school-girl.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">Update informations of student</h5>
                       <form action="{{ url('/update/' . $student->id) }}" method="post">
@@ -117,7 +116,6 @@
                             <input value="{{ $student->speciality }}" type="text" class="form-control" id="speciality" name="speciality" placeholder="Enter the speciality">
                         </div>
                         <input type="submit" class="btn btn-info" value="Update">
-                        <input type="submit" class="btn btn-warning" value="Reset">
                     </form>
                     </div>
                 </div>
@@ -126,6 +124,10 @@
         </div>
     </div>
     @endif
+
+    <footer>
+
+    </footer>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

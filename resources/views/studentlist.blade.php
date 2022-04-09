@@ -1,5 +1,5 @@
 <div class="card mb-3">
-  <img width="400" src="https://www.eurodiaconia.org/wordpress/wp-content/uploads/2017/01/education.jpg" class="card-img-top" alt="...">
+  <img width="400" src="https://www.ei-ie.org/img/Future-of-work-in-education.jpg?p=card" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">List Student</h5>
     <p class="card-text">You can find here all the informations about students in system.</p>
@@ -24,9 +24,8 @@
                 <th>{{ $student->age }}</th>
                 <td>{{ $student->speciality }}</td>
                 <td>
-                    <a href="" class="btn btn-sm btn-info">Show</a>
                     <a href="{{ url('/edit/'.$student->id) }}" class="btn btn-sm btn-warning">Edit</a>
-                    <a href="" class="btn btn-sm btn-danger">Delete</a>
+                    <a href="{{ url('/delete/'.$student->id) }}" class="btn btn-sm btn-danger">Delete</a>
                 </td>
             </tr>
         @endforeach
